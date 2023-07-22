@@ -62,6 +62,8 @@ git remote rm {origin}:删除远程仓库。
 git branch {branch_name}: 新建分支
 git branch:查看所有分支信息。
 git branch -d {branch_name}:删除分支。
+git branch -D {branch_name}:强行删除分支，不管分支是否合并
+git branch --set-upstream-to=origin/{branch_name} {local_branch_name}:指定本地{local_branch_name}分支与远程origin/{branch_name}分支的链接
 
 ### git merge [--no-ff] {branch_name}
 
@@ -78,5 +80,15 @@ git stash drop:删除stash内容
 
 ### git cherry-pick {commit id}
 
-复制一个特定的提交到当前分支。
+复制一个特定的提交到当前分支。一般用于把bug提交的修改“复制”到当前分支，避免重复劳动。
+
+### git pull 
+
+抓取远程分支。先pull再push的方案会使得提交历史混乱。
+
+### git rebase
+
+把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
+
+## 标签管理
 
