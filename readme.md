@@ -12,7 +12,11 @@
 
 ### git diff filename
 
-查看修改内容
+查看修改内容,
+
+```git
+git diff HEAD -- filename   # 查看版本库和工作区的区别
+```
 
 ### git log [--pretty=oneline]
 
@@ -26,3 +30,4 @@
 
 查看执行过的git命令。
 
+### 
