@@ -34,3 +34,6 @@ git diff HEAD -- filename   # 查看版本库和工作区的区别
 
 丢弃filename对应文件的工作区的修改，如果已经通过git add 添加到暂存区，那么撤销修改就回到添加到暂存区后的状态。（回到最近commit或add的状态）。 ** --staged ** 表示撤销暂存区修改，回到上次commit的状态。
 
+### git rm filename
+
+在工作区删除文件后，如果想要在版本库也要删除该文件，可以使用git rm命令。
