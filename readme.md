@@ -53,13 +53,15 @@ git remote rm {origin}:删除远程仓库。
 
 ## 分支管理
 
-### git checkout -b {branch_name}
+### git checkout/switch [-b]/[-c] {branch_name}
 
 创建新分支{breanch_name}，并切换到此分支。相当于**git branch {breanch_name}** + **git checkout {branch_name}** 组合。
 
 ### git branch
 
-查看所有分支信息。
+git branch {branch_name}: 新建分支
+git branch:查看所有分支信息。
+git branch -d {branch_name}:删除分支。
 
 ### git merge {branch_name}
 
