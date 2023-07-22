@@ -4,7 +4,7 @@
 
 ## 基本命令
 
-### git add {filename}
+### git add [-f] {filename}
 
 将文件修改提交到暂存区。
 
@@ -91,4 +91,35 @@ git stash drop:删除stash内容
 把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
 
 ## 标签管理
+
+### git tag [{tag_name}] [{commit_id}] [-a | -m | -d]
+
+默认为显示所有tag，加上{tag_name}就是为当前分支打上标签，默认打在最新的commit上，加上{commit_id}后就可以为特定的commit打上标签。
+通过**git show {tag_name}** 来显示标签具体信息。
+-d:删除标签
+
+git tag -a {tag_name} -m {comment} [{commit_id}]:创建带有说明的标签
+
+> 标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
+
+### git push origin {tag_name}
+
+推送某个标签到远程。
+git push origin --tags:推送所有标签到远程
+git push origin :refs/tags/{tag_name}：删除远程标签，需要先删除本地标签然后推送到远程
+
+## 自定义git
+
+### git config [--global] [ user.name | user.email | color.ui ｜ alias.{al_name}]
+```git 
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+### git ignore
+
+[官方ignore文件](https://github.com/github/gitignore)
+
+git check-ignore -v {file_name}：查看文件被哪条规则忽略
+
+## [搭建git服务器](https://www.liaoxuefeng.com/wiki/896043488029600/899998870925664)
 
