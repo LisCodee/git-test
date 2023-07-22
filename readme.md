@@ -67,5 +67,3 @@ git branch -d {branch_name}:删除分支。
 
 将{branch_name}分支的修改合并到当前分支上。[--no-ff]表示强制禁用Fast forward模式，Git会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
 否则，使用fast forward模式合并后的分支看不出来合并历史。
-
-### main分支修改，feature分支修改
