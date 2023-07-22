@@ -61,3 +61,6 @@ git remote rm {origin}:删除远程仓库。
 
 查看所有分支信息。
 
+### git merge {branch_name}
+
+将{branch_name}分支的修改合并到当前分支上。
