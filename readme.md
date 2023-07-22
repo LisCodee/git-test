@@ -20,9 +20,9 @@
 git diff HEAD -- filename   # 查看版本库和工作区的区别
 ```
 
-### git log [--pretty=oneline] [--graph]
+### git log [--pretty=oneline] [--graph] [--abbrev-commit]
 
-查看提交记录，--prett=oneline表示简化输出，--graph表示显示分支合并图。
+查看提交记录，--prett=oneline表示简化输出，--graph表示显示分支合并图,--abbrev-commit仅显示commit id的前七个字符。
 
 ### git reset [--hard] {HEAD^}
 
@@ -66,5 +66,6 @@ git branch -d {branch_name}:删除分支。
 ### git merge [--no-ff] {branch_name}
 
 将{branch_name}分支的修改合并到当前分支上。[--no-ff]表示强制禁用Fast forward模式，Git会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+否则，使用fast forward模式合并后的分支看不出来合并历史。
 
 ### main分支修改，feature分支修改
