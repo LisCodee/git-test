@@ -38,7 +38,7 @@ git diff HEAD -- filename   # 查看版本库和工作区的区别
 
 ### git rm {filename}
 
-在工作区删除文件后，如果想要在版本库也要删除该文件，可以使用git rm命令,然后commit，如果是误删文件，则可以使用**git restore {filename}**恢复文件。
+在工作区删除文件后，如果想要在版本库也要删除该文件，可以使用git rm命令,然后commit，如果是误删文件，则可以使用**git restore {filename}** 恢复文件。
 如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
 
 ### git remote命令
