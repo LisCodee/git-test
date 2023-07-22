@@ -67,3 +67,11 @@ git branch -d {branch_name}:删除分支。
 
 将{branch_name}分支的修改合并到当前分支上。[--no-ff]表示强制禁用Fast forward模式，Git会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
 否则，使用fast forward模式合并后的分支看不出来合并历史。
+
+### git stash
+
+git stash:可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
+git stash list:查看存储的现场；
+git stash apply:恢复现场，stash内容并不删除
+git stash pop:恢复并删除stash内容
+git stash drop:删除stash内容
