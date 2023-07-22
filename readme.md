@@ -84,7 +84,7 @@ git stash drop:删除stash内容
 
 ### git pull 
 
-抓取远程分支。先pull再push的方案会使得提交历史混乱。
+抓取远程分支。
 
 ### git rebase
 
