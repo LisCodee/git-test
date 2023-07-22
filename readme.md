@@ -43,8 +43,21 @@ git diff HEAD -- filename   # 查看版本库和工作区的区别
 
 ### git remote命令
 
-git remote add origin {giturl}：将远程仓库和本地仓库关联。
+git remote -v:查看远程仓库信息
+git remote add {origin} {giturl}：将远程仓库和本地仓库关联。
+git remote rm {origin}:删除远程仓库。
 
 ### git push [-u] origin {main}
 
 加上了-u参数，Git不但会把本地的{main}分支内容推送的远程新的{main}分支，还会把本地的{main}分支和远程的{main}分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+## 分支管理
+
+### git checkout -b {branch_name}
+
+创建新分支{breanch_name}，并切换到此分支。相当于**git branch {breanch_name}** + **git checkout {branch_name}** 组合。
+
+### git branch
+
+查看所有分支信息。
+
